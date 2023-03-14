@@ -1,0 +1,1884 @@
+{
+    "paths": {
+        "/addToCart": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Getting list.",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "get list param",
+                        "schema": {
+                            "$ref": "#/definitions/addTOCart"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/addTOCartResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/cartDetails": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Getting list.",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "get list param",
+                        "schema": {
+                            "$ref": "#/definitions/cartDetails"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/cartDetailsResponse"
+                        }
+                    }
+                    
+                    
+                }
+            }
+        },
+        "/getOrderList": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Getting list count.",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "get list param",
+                        "schema": {
+                            "$ref": "#/definitions/getOrderList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/getOrderListResponse"
+                        }
+                        
+                    }
+                }
+            }
+        },
+        "/orderDetails": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "update Order Status",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/orderDetails"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/orderDetailsResponse"
+                        }
+                        
+                    }
+                }
+            }
+        },
+        "/checkout": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Order detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/checkout"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/checkout"
+                        }
+                    }
+                }
+            }
+        },
+        "/getCartList": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Order detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/getCartList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/getCartListResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/cartUpdate": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Order detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/cartUpdate"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/cartUpdateResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/ratingUser": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Order detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/ratingUser"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/ratingUserResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/reorder": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "Order detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/reorder"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/reorderResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/addCreditCard": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "added credit card values",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/addCreditCard"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/addCreditCardResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/getCreditCard": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "get credit card listing",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/getCreditCard"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/getCreditCardResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/deleteCreditCard": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "delete credit card ",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/deleteCreditCard"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/deleteCreditCardResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/updateCreditCardDefault": {
+            "post": {
+                "tags": [
+                    "Manage Order"
+                ],
+                "description": "updated credit card default status",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/updateCreditCardDefault"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/updateCreditCardDefaultResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "addTOCart": {
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "dishId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "quantity": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "type": {
+                    "example":"add/remove" ,
+                    "type": "string"
+                },
+                "attribute": {
+                    "example":[1] ,
+                    "type": "array"
+                }
+            }
+        },
+        "addTOCartResponse": {
+
+            "properties": {
+               
+            "data": {
+                
+                "type":"object",
+                "properties": {
+            } 
+        }, "extra_meta":{
+            "type":"object",
+            "properties": {
+                
+                "message": {
+                    "type": "string",
+                    "example": "add to cart successfully"
+                }
+        }
+        }
+       
+        }},
+        "cartDetails": {
+            "required": [
+                "page",
+                "startDate",
+                "endDate"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        },
+        "cartDetailsResponse": {
+
+            "properties": {
+               
+            "data": {
+                
+                "type":"object",
+                "properties": {
+                    "id": {
+                        "type": "Number",
+                        "example": 1
+                    }, "userId": {
+                        "type": "Number",
+                        "example": 1
+                    }, 
+                    "orderUnique": {
+                        "type": "number",
+                        "example": 334510
+                    },
+                    "subTotal": {
+                        "type": "number",
+                        "example": 741
+                    },
+                    "taxAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "discountAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "tipAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "deliveryAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "totalAmount": {
+                        "type": "number",
+                        "example": 1810
+                    },
+                    "totalItem": {
+                        "type": "number",
+                        "example": 5
+                    },
+                    "ratedByCustomer": {
+                        "type": "number",
+                        "example": "true/false"
+                    },
+                    "addressCustomer": {
+                        "type":"object",
+                        "properties": {
+                            "addressOne": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressTwo": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressType": {
+                                "type": "string",
+                                "example": "Work"
+                            },
+                            "city": {
+                                "type": "string",
+                                "example": "Ahmedabad"
+                            },
+                            "state": {
+                                "type": "string",
+                                "example": "gujarat"
+                            },
+                            "country": {
+                                "type": "string",
+                                "example": "India"
+                            },"zipcode": {
+                                "type": "string",
+                                "example": "1245"
+                            }
+                        }    
+                    },"orderStatus": {
+                        "type": "string",
+                        "example": "Cart"
+                    },
+                    "orderDishType": {
+                        "type": "string",
+                        "example": "Normal"
+                    
+                    },
+                    "customTipAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "percentageTip": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "isCustomTipStatus": {
+                        "type": "number",
+                        "example": "true/false"
+                    },"isPercentageTipStatus": {
+                        "type": "number",
+                        "example": "true/false"
+                    },
+                    "promoCode": {
+                        "type": "string",
+                        "example": "FLAT20"
+                    },"promoCodeApplyStatus": {
+                        "type": "number",
+                        "example": "true/false"
+                    },
+                    "serverDateTime": {
+                        "type": "string",
+                        "example":"2020-10-16T09:40:02.000Z"
+                    },
+                    "OrderDetails": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            }
+                        ]
+                    
+                    }
+            } 
+        }, "extra_meta":{
+            "type":"object",
+            "properties": {
+                
+        }
+        }
+       
+        }},
+        "getOrderList": {
+            "required": [
+                "startDate",
+                "endDate"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "page": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        },
+        "getOrderListResponse": {
+
+            "properties": {
+
+                "data": {
+                    "type": "array",
+                    "example": [
+                        {
+                            "id": 2,
+                            "orderUnique": 347714,
+                            "orderDate": "2020-10-07T04:33:05.000Z",
+                            "orderStatus": "Pending",
+                            "subTotal": 0,
+                            "totalItem": 0,
+                            "ratedByCustomer": false,
+                            "chef": {
+                                "photo": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/christian-buehner-DItYlc26zVI-unsplash.jpg",
+                                "id": 1,
+                                "firstName": "fname",
+                                "lastName": "lname"
+                            }
+                        },
+                        {
+                            "id": 1,
+                            "orderUnique": 123456,
+                            "orderDate": "2020-10-06T15:35:30.000Z",
+                            "orderStatus": "Prepared",
+                            "subTotal": 100,
+                            "totalItem": 1,
+                            "ratedByCustomer": false,
+                            "chef": {
+                                "photo": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/blog-img-big_small.jpg",
+                                "id": 2,
+                                "firstName": "Neha",
+                                "lastName": "Bhavsar"
+                            }
+                        }
+                    ]
+                }
+        ,
+        "meta":{
+            "type":"object",
+            "properties": {
+                "current_page": {
+                    "type": "Number",
+                    "example": "1",
+                    "uniqueItems": true
+                },
+                "perPage": {
+                    "type": "string",
+                    "example": "10",
+                    "uniqueItems": true
+                },
+                "from": {
+                    "type": "string",
+                    "example": "1",
+                    "uniqueItems": true
+                },
+                "last_page": {
+                    "example": "3",
+                    "type": "string"
+                },
+                "path": {
+                    "example": "http://localhost:5011/getOrderList",
+                    "type": "string"
+                },
+                "per_page": {
+                    "example": "1",
+                    "type": "Number"
+                },
+                "to": {
+                    "example": "11",
+                    "type": "Number"
+                },
+                "total": {
+                    "example": "10",
+                    "type": "Number"
+                }
+        }
+        }
+       
+        }},
+        "orderDetails": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        },
+        "orderDetailsResponse": {
+
+            "properties": {
+               
+            "data": {
+                
+                "type":"object",
+                "properties": {
+                    "id": {
+                        "type": "Number",
+                        "example": 1
+                    }, "userId": {
+                        "type": "Number",
+                        "example": 1
+                    }, 
+                    "orderUnique": {
+                        "type": "number",
+                        "example": 334510
+                    },
+                    "subTotal": {
+                        "type": "number",
+                        "example": 741
+                    },
+                    "taxAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "discountAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "tipAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "deliveryAmount": {
+                        "type": "number",
+                        "example": 0
+                    },
+                    "totalAmount": {
+                        "type": "number",
+                        "example": 1810
+                    },
+                    "totalItem": {
+                        "type": "number",
+                        "example": 5
+                    },
+                    "addressCustomer": {
+                        "type":"object",
+                        "properties": {
+                            "addressOne": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressTwo": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressType": {
+                                "type": "string",
+                                "example": "Work"
+                            },
+                            "city": {
+                                "type": "string",
+                                "example": "Ahmedabad"
+                            },
+                            "state": {
+                                "type": "string",
+                                "example": "gujarat"
+                            },
+                            "country": {
+                                "type": "string",
+                                "example": "India"
+                            },"zipcode": {
+                                "type": "string",
+                                "example": "1245"
+                            }
+                        }    
+                    },
+                    "addressChef": {
+                        "type":"object",
+                        "properties": {
+                            "addressOne": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressTwo": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressType": {
+                                "type": "string",
+                                "example": "Work"
+                            },
+                            "city": {
+                                "type": "string",
+                                "example": "Ahmedabad"
+                            },
+                            "state": {
+                                "type": "string",
+                                "example": "gujarat"
+                            },
+                            "country": {
+                                "type": "string",
+                                "example": "India"
+                            },"zipcode": {
+                                "type": "string",
+                                "example": "1245"
+                            }
+                        }    
+                    },
+                    "chef": {
+                        "type":"object",
+                        "properties": {
+                            "id": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "firstName": {
+                                "type": "string",
+                                "example": "neha"
+                            },
+                            "lastName": {
+                                "type": "string",
+                                "example": "Bhavsar"
+                            },
+                            "photo": {
+                                "type": "string",
+                                "example": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/blog-img-big_small.jpg" 
+                            },
+                            "totalRating": {
+                                "type": "number",
+                                "example": 0
+                            },
+                            "avgRate": {
+                                "type": "number",
+                                "example": 0
+                            },
+                            "isOnline": {
+                                "type": "number",
+                                "example": 0
+                            }
+                        }
+                    },"driver": {
+                        "type":"object",
+                        "properties": {
+                            "id": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "firstName": {
+                                "type": "string",
+                                "example": "neha"
+                            },
+                            "lastName": {
+                                "type": "string",
+                                "example": "Bhavsar"
+                            },
+                            "photo": {
+                                "type": "string",
+                                "example": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/blog-img-big_small.jpg" 
+                            },
+                            "mobile": {
+                                "type": "string",
+                                "example": "7847479"
+                            },
+                            "countryCode": {
+                                "type": "number",
+                                "example": "+91"
+                            },
+                            "vehicleModel": {
+                                "type": "string",
+                                "example": "7847479"
+                            },
+                            "vehicleNumber": {
+                                "type": "number",
+                                "example": "7894891"
+                            },
+                            "emailId": {
+                                "type": "number",
+                                "example": ""
+                            },
+                            "addressOne": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressTwo": {
+                                "type": "string",
+                                "example": "test1"
+                            },
+                            "addressType": {
+                                "type": "string",
+                                "example": "Work"
+                            },
+                            "city": {
+                                "type": "string",
+                                "example": "Ahmedabad"
+                            },
+                            "state": {
+                                "type": "string",
+                                "example": "gujarat"
+                            },
+                            "country": {
+                                "type": "string",
+                                "example": "India"
+                            },"zipcode": {
+                                "type": "string",
+                                "example": "1245"
+                            }
+                        }
+                    }        
+                ,
+                    "orderStatus": {
+                        "type": "string",
+                        "example": "Cart"
+                    },
+                    "orderDishType": {
+                        "type": "string",
+                        "example": "Normal"
+                    
+                    },
+                    "ratedByCustomer": {
+                        "type": "number",
+                        "example": "true/false"
+                    },
+                    "orderDate": {
+                        "type": "string",
+                        "example": "Cart"
+                    },
+                    "OrderStatusTimelines": {
+                        "type": "array",
+                        "example":[
+                            {
+                                "orderStatus": "Confirmed",
+                                "createdAt": "2020-10-06T15:35:37.000Z"
+                            },
+                            {
+                                "orderStatus": "Under Preparation",
+                                "createdAt": "2020-10-06T15:36:01.000Z"
+                            },
+                            {
+                                "orderStatus": "Prepared",
+                                "createdAt": "2020-10-06T15:36:03.000Z"
+                            }
+                        ]
+                    
+                    },
+                    "OrderDetails": {
+                        "type": "array",
+                        "example": [
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            },
+                            {
+                                "price": 100,
+                                "quantity": 1,
+                                "attribute": [
+                                    {
+                                        "id": 1,
+                                        "name": "Crust",
+                                        "price": "$40.50"
+                                    },
+                                    {
+                                        "id": 2,
+                                        "name": "Cheese",
+                                        "price": "$40.50"
+                                    }
+                                ],
+                                "totalPrice": 181,
+                                "dishName": "Onion  Pizza",
+                                "dishMedia": [
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184701167_thumb.jpg"
+                                    },
+                                    {
+                                        "url": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466.jpg",
+                                        "type": "image",
+                                        "thumbnailUrl": "https://foodjinappdev.blob.core.windows.net/foodjinapidev/IMG_20200921_184712466_thumb.jpg"
+                                    }
+                                ],
+                                "dishType": "Veg"
+                            }
+                        ]
+                    
+                    }
+            } 
+        }, "extra_meta":{
+            "type":"object",
+            "properties": {
+                
+        }
+        }
+       
+        }},
+        "checkout": {
+            "required": [
+                "userId",
+                "orderId",
+                "remark"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "id": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "remark": {
+                    "example": "make it special",
+                    "type": "string"
+                },
+                "preOrderDate": {
+                    "example": "2020-10-14",
+                    "type": "string"
+                },
+                "preOrderTime": {
+                    "example": "14:10:59",
+                    "type": "string"
+                },
+                "stripeCustomerId": {
+                    "example": "cus_IK0nDfgIa29n05",
+                    "type": "string"
+                },
+                "cardId": {
+                    "example": "card_1HlTATL1vn3KL9lxLWEpP8Gh",
+                    "type": "string"
+                }
+            }
+        },
+        "getCartList": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        },
+        "getCartListResponse": {
+
+            "properties": {
+
+                "data": {
+                    "type": "array",
+                    "example": [
+                        {
+                            "dishId": 2,
+                            "quantity": 1,
+                            "attribute": [
+                                {
+                                    "id": 1,
+                                    "name": "Crust",
+                                    "price": "$40.50"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Cheese",
+                                    "price": "$40.50"
+                                }
+                            ]
+                        },
+                        {
+                            "dishId": 2,
+                            "quantity": 1,
+                            "attribute": [
+                                {
+                                    "id": 1,
+                                    "name": "Crust",
+                                    "price": "$40.50"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Cheese",
+                                    "price": "$40.50"
+                                }
+                            ]
+                        },
+                        {
+                            "dishId": 2,
+                            "quantity": 1,
+                            "attribute": [
+                                {
+                                    "id": 1,
+                                    "name": "Crust",
+                                    "price": "$40.50"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Cheese",
+                                    "price": "$40.50"
+                                }
+                            ]
+                        },
+                        {
+                            "dishId": 2,
+                            "quantity": 1,
+                            "attribute": [
+                                {
+                                    "id": 1,
+                                    "name": "Crust",
+                                    "price": "$40.50"
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Cheese",
+                                    "price": "$40.50"
+                                }
+                            ]
+                        }
+                    ]
+                }
+        ,
+        "meta":{
+            "type":"object",
+            "properties": {
+               
+        }
+        }
+       
+        }},
+        "cartUpdate": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "id": {
+                    "example": 1,
+                    "type": "number"
+                },"type": {
+                    "example": "status/quantity/tip/promocode",
+                    "type": "number"
+                },
+                "orderType": {
+                    "example": "Delivery/Take away",
+                    "type": "number"
+                },
+                "quantity": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "customTipAmount": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "percentageTip": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "dishId": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "promocode": {
+                    "example": "FLAT20",
+                    "type": "string"
+                }
+                
+            }
+        },
+        "cartUpdateResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                        "id": {
+                            "type": "Number",
+                            "example": 1
+                        },
+                        "subTotal": {
+                            "type": "number",
+                            "example": 741
+                        },
+                        "taxAmount": {
+                            "type": "number",
+                            "example": 0
+                        },
+                        "discountAmount": {
+                            "type": "number",
+                            "example": 0
+                        },
+                        "tipAmount": {
+                            "type": "number",
+                            "example": 0
+                        },
+                        "deliveryAmount": {
+                            "type": "number",
+                            "example": 0
+                        },
+                        "totalAmount": {
+                            "type": "number",
+                            "example": 1810
+                        },
+                        "customTipAmount": {
+                            "type": "number",
+                            "example": 0
+                        },
+                        "percentageTip": {
+                            "type": "number",
+                            "example": 0
+                        },
+                        "isCustomTipStatus": {
+                            "type": "number",
+                            "example": "true/false"
+                        },"isPercentageTipStatus": {
+                            "type": "number",
+                            "example": "true/false"
+                        },
+                        "promoCode": {
+                            "type": "string",
+                            "example": "FLAT20"
+                        },"promoCodeApplyStatus": {
+                            "type": "number",
+                            "example": "true/false"
+                        }
+                        
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    
+            }
+            }
+           
+            }
+        },
+        "ratingUser": {
+            "required": [
+                "userId",
+                "chefId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "chefId": {
+                    "example": 1,
+                    "type": "number"
+                },"chefRating": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "orderId": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "driverId": {
+                    "example": 1,
+                    "type": "number"
+                },"driverRating": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "driverComment": {
+                    "example": "testing",
+                    "type": "string"
+                },
+                "dish": {
+                    "example": [{"dishId":2,"comment":"","rating":1},{"dishId":2,"comment":"","rating":1}],
+                    "type": "array"
+                },
+                "compliments": {
+                    "example": [1,2,3],
+                    "type": "array"
+                }
+                
+                
+            }
+        },
+        "ratingUserResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                       
+                        
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    "message": {
+                        "example": "rating successfully",
+                        "type": "string"
+                    }
+            }
+            }
+           
+            }
+        },
+        "reorder": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "orderId": {
+                    "example": 10,
+                    "type": "number"
+                }
+                
+            }
+        },
+        "reorderResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                       
+                        
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    "message": {
+                        "example": "add to cart successfully",
+                        "type": "string"
+                    }
+            }
+            }
+           
+            }
+        },
+        "addCreditCard": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "creditCardNumber": {
+                    "example": "424242424242422",
+                    "type": "string"
+                },
+                "expMonth": {
+                    "example": "11",
+                    "type": "string"
+                },"expYear": {
+                    "example": "2011",
+                    "type": "string"
+                },"cvc": {
+                    "example": "314",
+                    "type": "string"
+                },
+                "name": {
+                    "example": "card name",
+                    "type": "string"
+                }
+                
+                
+            }
+        },
+        "addCreditCardResponse": {
+
+            "properties": {
+               
+            "data": {
+                
+                "type":"object",
+                "properties": {
+            } 
+        }, "extra_meta":{
+            "type":"object",
+            "properties": {
+                
+                "message": {
+                    "type": "string",
+                    "example": "card added successfully"
+                }
+        }
+        }
+       
+        }},
+        "getCreditCard": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                }
+                
+            }
+        },
+        "getCreditCardResponse": {
+
+            "properties": {
+
+                "data": {
+                    "type": "array",
+                    "example": [
+                        {
+                            "cardId": "card_1HlTD4L1vn3KL9lx3vbtBxr4",
+                            "brand": "JCB",
+                            "exp_month": 10,
+                            "exp_year": 2029,
+                            "last4": "0505",
+                           "name":"name"
+                        },
+                        {
+                            "cardId": "card_1HlTJaL1vn3KL9lxK3s9CgsB",
+                            "brand": "UnionPay",
+                            "exp_month": 10,
+                            "exp_year": 2029,
+                            "last4": "0005",
+                            "name":"name"
+                        },
+                        {
+                            "cardId": "card_1HlTCOL1vn3KL9lxANGuywmV",
+                            "brand": "Discover",
+                            "exp_month": 10,
+                            "exp_year": 2029,
+                            "last4": "1117",
+                            "name":"name"
+                        }
+                    ]
+                }
+        ,
+        "meta":{
+            "type":"object",
+            "properties": {
+               
+        }
+        }
+       
+        }},
+        "deleteCreditCard": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "cardId": {
+                    "example": "tok_1HjPn2L1vn3KL9lxaVsit0Td",
+                    "type": "string"
+                }
+                
+            }
+        },
+        "deleteCreditCardResponse": {
+
+            "properties": {
+               
+            "data": {
+                
+                "type":"object",
+                "properties": {
+            } 
+        }, "extra_meta":{
+            "type":"object",
+            "properties": {
+                
+                "message": {
+                    "type": "string",
+                    "example": "delete card successfully"
+                }
+        }
+        }
+       
+        }},
+        "updateCreditCardDefault": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "cardId": {
+                    "example": "tok_1HjPn2L1vn3KL9lxaVsit0Td",
+                    "type": "string"
+                }
+                
+            }
+        },
+        "updateCreditCardDefaultResponse": {
+
+            "properties": {
+               
+            "data": {
+                
+                "type":"object",
+                "properties": {
+            } 
+        }, "extra_meta":{
+            "type":"object",
+            "properties": {
+                
+                "message": {
+                    "type": "string",
+                    "example": "card updated successfully"
+                }
+        }
+        }
+       
+        }}
+
+    }
+}

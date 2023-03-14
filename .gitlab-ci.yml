@@ -1,0 +1,26 @@
+stages:
+
+  - build&push_dev
+  - deploy_dev
+
+build&push_dev:
+  stage: build&push_dev
+  tags:
+    - docker-exec
+  script:
+    - docker build -f stage.dockerfile -t "$NODE_PROJ_NAME":latest .
+    - docker push "$NODE_PROJ_NAME":latest
+    - docker rmi "$NODE_PROJ_NAME":latest
+  only:
+    - develop
+
+deploy_dev:
+  stage: deploy_dev
+  tags:
+    - shell-exec
+  script:
+    - ssh -o "StrictHostKeyChecking=no" jsnic_foodjin@control.indianic.dev "cd /var/www/foodjin.indianic.dev/web/foodjin/devops/ && docker-compose -f docker-compose-stage.yml pull && docker-compose -f docker-compose-stage.yml up -d"
+    - echo "Deployment Successful"
+  only:
+    - develop
+

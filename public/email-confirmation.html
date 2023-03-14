@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodjin App</title>
+    <link href='./style.css' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
+
+<body>
+    <div class="resetpassbox">
+        <div id="passwordreset" class="mainbox">
+            <div class="panel panel-info">
+                <div class="logo">
+                    <img src="logo.png" alt="Kaded App">
+                </div>
+                <div class="panel-heading">
+                    <div class="panel-title" id="status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var url = $(location).attr('href');
+            var token = url.split("?token=")[1];
+
+            var requestObject = {
+                token: token
+            }
+
+            // var apiUrl = 'http://localhost:3000/api/';
+            var apiUrl = 'https://foodjin.indianic.dev/customer/';
+
+            $.ajax({
+                url: apiUrl + 'users/verifyUser',
+                type: 'get',
+                data: requestObject,
+                success: function (data) {
+                    if (data.status == 1) {
+                        $('#status').html('Congratualtions! Your EmailId has been verified successfully.').css('color', 'black');
+                    } else if (data.message) {
+                        $('#status').html(data.message).css('color', 'red');
+                    }
+                    setTimeout("window.close()", 6000);
+                },
+                error: function (errMsg) {
+                    if (errMsg.responseJSON.error !== undefined && errMsg.responseJSON.error.message !== undefined) {
+                        $('#status').html(errMsg.responseJSON.error.message).css('color', 'red');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

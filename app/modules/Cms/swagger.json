@@ -1,0 +1,292 @@
+{
+    "paths": {
+        "/getFaq": {
+            "post": {
+                "tags": [
+                    "CMS Listing"
+                ],
+                "description": "CMS Listing",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/getFaq"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/getFaqResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/getCmsPage": {
+            "post": {
+                "tags": [
+                    "CMS Listing"
+                ],
+                "description": "CMS Listing",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/getCmsPage"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/getCmsPageResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/addContactUs": {
+            "post": {
+                "tags": [
+                    "CMS Listing"
+                ],
+                "description": "CMS Listing",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/addContactUs"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/addContactUsResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "getFaq": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+        
+                
+            }
+        },
+        "getFaqResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                        "faqDesorption": {
+                            "type": "string",
+                            "example":"<p><strong>How can we help you?</strong></p>\n\n<p>You can also browse the topics below to find what you are looking for.</p>"
+                        },
+                        "faqList": {
+                            "type": "array",
+                            "example": [
+                                {
+                                    "id": 1,
+                                    "question": "Pizza",
+                                    "answer": "Pizza",
+                                    "status": true,
+                                    "displayOrder": 1,
+                                    "createdAt": "2020-10-29T05:25:52.000Z",
+                                    "updatedAt": "2020-10-30T09:32:27.000Z",
+                                    "deletedAt": null
+                                },
+                                {
+                                    "id": 3,
+                                    "question": "Payment",
+                                    "answer": "on 7th next",
+                                    "status": false,
+                                    "displayOrder": 1,
+                                    "createdAt": "2020-10-29T05:26:27.000Z",
+                                    "updatedAt": "2020-10-30T09:32:44.000Z",
+                                    "deletedAt": null
+                                },
+                                {
+                                    "id": 6,
+                                    "question": "Pizza",
+                                    "answer": "Pizza",
+                                    "status": false,
+                                    "displayOrder": 5,
+                                    "createdAt": "2020-10-30T09:30:55.000Z",
+                                    "updatedAt": "2020-10-30T09:31:44.000Z",
+                                    "deletedAt": null
+                                }
+                            ]
+                        
+                        }
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    
+            }
+            }
+           
+            }
+        },
+        "getCmsPage": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "pageType": {
+                    "example": "faq/privacy_policy/term_service",
+                    "type": "number"
+                }
+           
+                
+            }
+        },
+        "getCmsPageResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example":1
+                        },
+                        "templateKey": {
+                            "type": "string",
+                            "example":"faq"
+                        },
+                        "title": {
+                            "type": "string",
+                            "example":""
+                        },
+                        "content": {
+                            "type": "string",
+                            "example":"<p><strong>How can we help you?</strong></p>\n\n<p>You can also browse the topics below to find what you are looking for.</p>"
+                        }
+                       
+                        
+
+                      
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    
+            }
+            }
+           
+            }
+        },
+        "addContactUs": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "orderId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "message": {
+                    "example": "testing",
+                    "type": "number"
+                },
+                "type": {
+                    "example": "Order/Payment/Other",
+                    "type": "number"
+                }
+                
+                
+            }
+        },
+        "addContactUsResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                       
+                        
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    "message": {
+                        "example": "contactus successfully",
+                        "type": "string"
+                    }
+            }
+            }
+           
+            }
+        }
+    }
+}

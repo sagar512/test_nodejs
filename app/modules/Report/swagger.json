@@ -1,0 +1,109 @@
+{
+    "paths": {
+        "/addReport": {
+            "post": {
+                "tags": [
+                    "Report"
+                ],
+                "description": "report tag",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/addReport"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list.",
+                        "schema": {
+                            "$ref": "#/definitions/addReportResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "addReport": {
+            "required": [
+                "userId",
+                "orderId"
+            ],
+            "properties": {
+                "userId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "reason": {
+                    "example": "testing",
+                    "type": "number"
+                },
+                "dishId": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "chefId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "commentId": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "newsFeedId": {
+                    "example": 10,
+                    "type": "number"
+                },
+                "reportType": {
+                    "example": "Dish/Chef/NewsFeed/Comment",
+                    "type": "number"
+                },
+                "message": {
+                    "example": "reporting",
+                    "type": "string"
+                }
+                
+            }
+        },
+        "addReportResponse": {
+            "required": [
+                "id"
+            ],
+            "properties": {
+               
+                "data": {
+                    
+                    "type":"object",
+                    "properties": {
+                       
+                        
+                        
+                        
+                } 
+            }, "extra_meta":{
+                "type":"object",
+                "properties": {
+                    "message": {
+                        "example": "report successfully",
+                        "type": "string"
+                    }
+            }
+            }
+           
+            }
+        }
+    }
+}

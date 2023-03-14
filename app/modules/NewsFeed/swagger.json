@@ -1,0 +1,244 @@
+{
+    "paths": {
+        "/getNewsFeedList": {
+            "post": {
+                "tags": [
+                    "NewsFeed"
+                ],
+                "description": "Getting list.",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "get list param",
+                        "schema": {
+                            "$ref": "#/definitions/listNewsFeed"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list."
+                    }
+                }
+            }
+        },
+        "/getNewsFeed": {
+            "post": {
+                "tags": [
+                    "NewsFeed"
+                ],
+                "description": "Get detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/getNewsFeed"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "detail data"
+                    }
+                }
+            }
+        },
+        "/getNewsFeedCommentList": {
+            "post": {
+                "tags": [
+                    "NewsFeed"
+                ],
+                "description": "Getting list.",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "get list param",
+                        "schema": {
+                            "$ref": "#/definitions/listNewsFeedComment"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list."
+                    }
+                }
+            }
+        },
+        "/addNewsFeedComment": {
+            "post": {
+                "tags": [
+                    "NewsFeed"
+                ],
+                "description": "add comment.",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "get list param",
+                        "schema": {
+                            "$ref": "#/definitions/addComment"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "list."
+                    }
+                }
+            }
+        },
+        "/deleteNewsFeedComment": {
+            "post": {
+                "tags": [
+                    "NewsFeed"
+                ],
+                "description": "Get detail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "description": "Authorization token",
+                        "type": "string"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "param",
+                        "schema": {
+                            "$ref": "#/definitions/deleteComment"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "success"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "listNewsFeed": {
+            "required": [
+                "page"
+            ],
+            "properties": {
+                "page": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "searchText": {
+                    "example": "",
+                    "type": "string"
+                },
+                "latitude": {
+                    "example": "23.025615",
+                    "type": "string"
+                },
+                "longitude": {
+                    "example": "72.507182",
+                    "type": "string"
+                }
+                
+            }
+        },
+        "getNewsFeed": {
+            "required": [
+                "newsFeedId"
+            ],
+            "properties": {
+                "newsFeedId": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        },
+        "listNewsFeedComment": {
+            "required": [
+                "newsFeedId",
+                "page"
+            ],
+            "properties": {
+                "newsFeedId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "page": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        },
+        "addComment": {
+            "required": [
+                "newsFeedId",
+                "comment"
+            ],
+            "properties": {
+                "newsFeedId": {
+                    "example": 1,
+                    "type": "number"
+                },
+                "comment": {
+                    "example": "hi, test",
+                    "type": "string"
+                }
+            }
+        },
+        "deleteComment": {
+            "required": [
+                "commentId"
+            ],
+            "properties": {
+                "commentId": {
+                    "example": 1,
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

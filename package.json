@@ -1,0 +1,82 @@
+{
+  "name": "nodejs_customer",
+  "version": "1.0.0",
+  "description": "Server side package menagement",
+  "main": "server.js",
+  "dependencies": {
+    "apn": "2.2.0",
+    "aws-sdk": "2.478.0",
+    "azure-storage": "^2.10.3",
+    "bcrypt": "5.0.0",
+    "body-parser": "1.19.0",
+    "compression": "1.7.4",
+    "connect-timeout": "1.9.0",
+    "cors": "2.8.5",
+    "crypto": "^1.0.1",
+    "csvjson": "5.1.0",
+    "custom-env": "2.0.1",
+    "express": "4.17.1",
+    "express-basic-auth": "1.2.0",
+    "express-force-ssl": "0.3.2",
+    "express-rate-limit": "5.0.0",
+    "express-session": "1.16.2",
+    "express-validator": "6.1.1",
+    "fcm-node": "1.5.1",
+    "file-system": "2.2.2",
+    "fs": "0.0.1-security",
+    "glob": "7.1.4",
+    "html-pdf": "2.2.0",
+    "http-auth": "3.2.3",
+    "i18n": "0.8.3",
+    "into-stream": "^6.0.0",
+    "jimp": "^0.10.3",
+    "json-api": "3.0.0-rc.6.0.1",
+    "json2csv": "4.5.1",
+    "json2xls": "0.1.2",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.11",
+    "method-override": "3.0.0",
+    "moment": "2.24.0",
+    "morgan": "1.9.1",
+    "morgan-body": "2.4.7",
+    "multer": "^1.4.1",
+    "multiparty": "4.2.1",
+    "mustache": "^4.0.1",
+    "mv": "2.1.1",
+    "mysql2": "^2.1.0",
+    "node-cron": "2.0.3",
+    "nodemailer": "6.2.1",
+    "nodemon": "1.19.1",
+    "password-validator": "4.1.1",
+    "run-rs": "0.5.2",
+    "sequelize": "^6.3.0",
+    "redis": "^3.0.2",
+    "socket.io-emitter": "^3.1.1",
+    "socket.io-redis": "^5.1.0",
+    "socket.io-parser": "3.1.2",
+    "stripe": "^8.119.0",
+    "swagger-ui-express": "4.0.6",
+    "twilio": "3.39.5",
+    "url": "0.11.0",
+    "xlsx-to-json": "0.3.0"
+  },
+  "devDependencies": {
+    "sonarqube-scanner": "2.4.1"
+  },
+  "scripts": {
+    "sonar": "node sonar-project.js",
+    "test": "snyk test",
+    "start": "node server.js",
+    "sonar-test": "sonar-scanner"
+  },
+  "targets": [
+    {
+      "target_name": "binding",
+      "sources": [
+        "src/binding.cc"
+      ]
+    }
+  ],
+  "author": "IndiaNIC",
+  "license": "ISC"
+}

@@ -1,0 +1,14 @@
+{
+    "user": {
+        "password": 0,
+        "__v": 0,
+        "previouslyUsedPasswords": 0,
+        "verificationToken": 0,
+        "forgotToken": 0,
+        "deviceToken": 0,
+        "passwordUpdatedAt": 0,
+        "isDeleted": 0,
+        "failedAttempts": 0,
+        "forgotTokenCreationTime": 0
+    }
+}
