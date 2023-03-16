@@ -1,4 +1,4 @@
-FROM docker.indianic.com/library/node:12.16.0
+FROM node:12.16.0
 
 WORKDIR /usr/src/app
 
