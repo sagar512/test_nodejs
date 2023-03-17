@@ -1,4 +1,10 @@
 {
+  
+  "browser": {
+  "fs": false,
+  "path": false,
+  "os": false
+}
   "name": "nodejs_customer",
   "version": "1.0.0",
   "description": "Server side package menagement",
