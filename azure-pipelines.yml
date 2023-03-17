@@ -17,7 +17,7 @@ steps:
 
 - script: |
     npm start
-    npm install express
+    npm install express --save
     #npm install --loglevel=error
     npm run build
   displayName: 'npm install and build'
