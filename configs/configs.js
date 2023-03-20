@@ -13,11 +13,3 @@ console.log("ENV_VARIABLES", ENV_VARIABLES.db)
 module.exports = {
     ...ENV_VARIABLES,
 };
-module.exports = {
-    ...
-    resolve: {
-        fallback: {
-            "fs": false
-        },
-    }
-}
