@@ -18,6 +18,7 @@ steps:
 - script: |
     npm cache clean --force
     npm i
+    npm install mysql --save
     npm start
     #npm run build
   displayName: 'npm install and build'
