@@ -17,8 +17,6 @@ steps:
 
 - script: |
     npm install -g nodemon
-    #npm install express --save
-    #npm install --loglevel=error
     npm start
     npm run build
   displayName: 'npm install and build'
