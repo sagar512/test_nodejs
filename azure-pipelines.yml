@@ -16,7 +16,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install express --save
+    npm install -g nodemon
+    #npm install express --save
     #npm install --loglevel=error
     npm start
     npm run build
