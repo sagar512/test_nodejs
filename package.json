@@ -29,7 +29,7 @@
     "html-pdf": "2.2.0",
     "http-auth": "3.2.3",
     "into-stream": "^6.0.0",
-    "jimp": "^0.10.3",
+    "jimp": "^0.22.7",
     "json-api": "3.0.0-rc.6.0.1",
     "json2csv": "4.5.1",
     "json2xls": "0.1.2",
