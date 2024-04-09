@@ -43,7 +43,7 @@
     "multiparty": "4.2.1",
     "mustache": "^4.0.1",
     "mv": "2.1.1",
-    "mysql2": "^2.1.0",
+    "mysql2": "^3.9.4",
     "node-cron": "2.0.3",
     "nodemailer": "6.2.1",
     "nodemon": "1.19.1",
