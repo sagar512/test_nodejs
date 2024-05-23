@@ -46,7 +46,7 @@
     "mysql2": "^2.1.0",
     "node-cron": "2.0.3",
     "nodemailer": "6.2.1",
-    "nodemon": "1.19.1",
+    "nodemon": "2.0.0",
     "password-validator": "4.1.1",
     "run-rs": "0.5.2",
     "sequelize": "^6.3.0",
